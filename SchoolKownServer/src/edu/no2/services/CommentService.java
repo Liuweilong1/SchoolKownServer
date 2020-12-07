@@ -25,7 +25,7 @@ public class CommentService {
 	 */
 	public List<Comment> getComments(int circle_id) throws ClassNotFoundException, SQLException{
 		List<Comment> comments = new ArrayList<>();
-		String sql = "select * from commentwhere circle_id='"+circle_id+"'";
+		String sql = "select * from comment where circle_id='"+circle_id+"'";
 		ResultSet rs = dbutil.queryDate(sql);
 		while(rs.next()) {
 			Comment comment = new Comment();
